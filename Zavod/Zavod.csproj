@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D35EA0E-5C84-45F1-AA61-367C24863FDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Zavod</RootNamespace>
+    <AssemblyName>Zavod</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Administration.Designer.cs">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Zvonki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Zvonki.Designer.cs">
+      <DependentUpon>Zvonki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Students.Designer.cs">
+      <DependentUpon>Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Teachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Teachers.Designer.cs">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notify\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notify\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notify\Succes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notify\Succes.Designer.cs">
+      <DependentUpon>Succes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Registrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrator.Designer.cs">
+      <DependentUpon>Registrator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Administration.resx">
+      <DependentUpon>Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Zvonki.resx">
+      <DependentUpon>Zvonki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Students.resx">
+      <DependentUpon>Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Teachers.resx">
+      <DependentUpon>Teachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notify\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notify\Succes.resx">
+      <DependentUpon>Succes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrator.resx">
+      <DependentUpon>Registrator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-eye-7615155.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-clear-1632708.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-delete-cross-63694.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-minimize-sign-6057365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-avatar-6387915.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-mail-646135.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-padlock-494933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-check-mark-64484.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-settings-503849.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-question-2476190.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-home-1946436.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-schedule-7322493.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-students-cap-46955.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-teacher-3487212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-eye-159604.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-exit-9070510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-tick-mark-665939.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-cross-sign-4653743.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-cross-5757596.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-error-3093159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-warning-3756663.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8264f117-66fe-4bfe-8a29-320889d52ef9 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8264f117-66fe-4bfe-8a29-320889d52ef9 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Menu\Other\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-telephone-receiver-70677.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
